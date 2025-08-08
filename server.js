@@ -5,7 +5,11 @@ const Ably = require('ably');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://gaming-frontend-cyan.vercel.app', // Replace with your actual frontend URL
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+}));
 app.use(express.json());
 
 // Connect to MongoDB
