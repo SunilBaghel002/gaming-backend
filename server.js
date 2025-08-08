@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://gaming-frontend-cyan.vercel.app', // Replace with your actual frontend URL
+  origin: ['https://gaming-frontend-cyan.vercel.app', 'http://localhost:5173'], // Replace with your actual frontend URL
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
